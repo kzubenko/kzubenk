@@ -1,0 +1,22 @@
+//@mixin font($font_name, $file_name, $weight, $style) {
+//
+//    @font-face {
+//    font-family: $font_name;
+//    font-display: swap;
+//    src: url("../../dist/fonts/") format("woff"), url("../../dist/fonts/#{$file_name}.woff2") format("woff2");
+//    font-weight: #{$weight};
+//    font-style: #{$style};
+//    }
+//}
+//
+//@import "fonts.scss";
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+@import "components/reset.scss";
+@import "section/header.scss";
+@import "section/editor/editor-desc";
+@import "section/editor/editor-benefits";
+@import "section/section_about.scss";
+@import "section/footer.scss"; // dalate or not delete
+
+
+

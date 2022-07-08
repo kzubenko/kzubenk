@@ -1,0 +1,112 @@
+@import "src/scss/mixins/mixins";
+.editor {
+
+ &__benefits {
+   background: #F4F4F4;
+   @media screen and (max-width: 992px){
+     background: none;
+   }
+  &_wrapper {
+    min-width: 320px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 98px 10px 32px 10px;
+    display: grid;
+    grid-template-areas:
+            "main title"
+            "main screenshot";
+    grid-template-columns: 45% 1fr;
+    grid-column-gap: 50px;
+    @media screen and (max-width:992px) {
+
+      grid-template-columns: 1fr;
+    grid-template-areas:
+            "title"
+            "main"
+            "screenshot";
+  }
+  }
+   &-title {
+    @include mainFont(700,48px,50px,$mainColor);
+     text-align: left;
+     grid-area: title;
+     margin-bottom: 20px;
+     @media screen and (max-width: 992px)  {
+       @include mainFont(700,42px,44px,$mainColor);
+       margin: 0px auto 50px auto;
+       text-align: center;
+     }
+     @media screen and (max-width: 480px)  {
+       @include mainFont(700,32px,38px,$mainColor);
+       margin: 0 auto 36px auto;
+       text-align: center;
+     }
+   }
+   &-main {
+     grid-area: main;
+     grid-column-gap: 22px;
+     padding: 0 0 0 60px;
+     @media screen and (max-width: 992px) {
+       padding: 0 30px 0 30px;
+     }
+     @media screen and (max-width: 480px) {
+       display: block;
+     }
+     .benefit__item {
+       margin-bottom: 34px;
+       display: grid;
+       grid-template-columns: (auto auto);
+       justify-content: center;
+       @media screen and (max-width: 992px) {
+         margin-bottom: 60px;
+       }
+       @media screen and (max-width: 480px) {
+         grid-template-columns: auto;
+         justify-content: center;
+         text-align: center;
+       }
+       &-img {
+         margin: 0 24px 0 0;
+         text-align: center;
+         width: 111px;
+         @media screen and (max-width: 480px) {
+           margin: 0 auto 26px auto;
+         }
+       }
+       &-text {
+         text-align: start;
+         @media screen and (max-width: 480px) {
+           text-align: center;
+         }
+         &-title {
+           @include mainFont(400, 16px, 21px, #323232);
+           margin-bottom: 16px;
+           @media screen and (max-width: 480px) {
+             margin-bottom: 14px;
+             line-height: 16px;
+           }
+         }
+         &-content {
+           @include secondaryFont(400, 14px, 21px, $colorContent)
+         }
+       }
+     }
+   }
+   &-screenshot {
+     grid-area: screenshot;
+     background: url("/img/content/editor_1.png");
+     background-size: contain;
+     background-repeat: no-repeat;
+     max-width: 1200px;
+     height: 519px;
+     @media (max-width: 992px) {
+       background-size: cover;
+     }
+     @media (max-width: 480px) {
+       height: 381px;
+     }
+   }
+ }
+}
+

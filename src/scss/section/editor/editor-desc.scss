@@ -1,0 +1,71 @@
+@import "src/scss/mixins/mixins";
+.editor{
+  min-width: 320px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 10px;
+  &__desc {
+    margin: 0 auto;
+    max-width: 862px;
+   display: flex;
+   flex-direction: column;
+   margin-top: 120px;
+    align-items: center;
+    &-title {
+      @include mainFont(700,54px, 54px,#635C73);
+      text-transform: uppercase;
+      @media screen and (max-width: 768px) {
+        @include mainFont(700,42px,42px, #635C73);
+        margin-top: 92px;
+      }
+      @media screen and (max-width: 480px) {
+        @include mainFont(700,26px,28px, #635C73);
+        margin-top: 80px;
+      }
+    }
+    &-text {
+      margin-top: 36px;
+      @include secondaryFont(400,21px,32px,#323232);
+      @media screen and (max-width: 480px){
+        @include secondaryFont(400,14px,20px,#323232);
+        margin-top: 26px;
+      }
+    }
+    &-links {
+      display: flex;
+      justify-content: center;
+      max-width: 366px;
+      gap: 10px;
+      margin: 20px 0 70px 0;
+      @media screen and (max-width: 480px) {
+        margin-bottom: 120px;
+        flex-wrap: wrap;
+      }
+      &-item {
+        display: flex;
+      }
+    }
+ }
+}
+.link-btn {
+  @include mainFont(bold, 12px, 20px, #c9d1d9);
+  display: flex;
+  align-items: center;
+  padding: 3px 12px;
+  background-color: #f2f2f2;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px 0 0 6px;
+  cursor: pointer;
+  box-sizing: border-box;
+  :first-child {
+    margin-right: 5px;
+  }
+}
+.link-count {
+  @include mainFont(bold, 12px, 20px, #c9d1d9);
+  border-radius: 0 6px 6px 0;
+  background-color: transparent;
+  border: 1px solid rgba(27, 31, 35, .15);
+  padding: 4px;
+}

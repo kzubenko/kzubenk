@@ -1,0 +1,225 @@
+@import url(/src/scss/mixins/mixins.scss);
+
+.about__conteiner{
+    min-width: 320px;
+    max-width: 1200px;
+    margin: 0px auto;
+    overflow-x: hidden;
+}
+
+.about {
+    background: url(/img/background/background2.webp);
+    min-height: 820px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.about__title {
+    @include mainFont(700, 48px, 50px,  #FFFFFF);
+    text-align: center;
+    margin-top: 110px;
+}
+
+.about__suppliers {
+    padding: 0 40px;
+}
+
+.about__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 24px;
+    text-align: center;
+}
+
+.info__content {
+    padding-top: 58px;
+}
+
+.content-first {
+    margin-top: 33px;
+    @include secondaryFont(700, 16px, 24px,  #FFFFFF);
+    font-style: italic;
+}
+
+.content-second {
+    margin-top: 27px;
+    @include secondaryFont(700, 16px, 24px,  #FFFFFF);
+    font-style: italic;
+}
+.content-third {
+    margin-top: 15px;
+    @include secondaryFont(700, 16px, 24px,  #FFFFFF);
+    font-style: italic;
+}
+
+.content-four {
+    margin-top: 33px;
+    @include secondaryFont(700, 16px, 24px,  #FFFFFF);
+    font-style: italic;
+}
+.content-five {
+    margin-top: 25px;
+    @include secondaryFont(700, 16px, 24px,  #FFFFFF);
+    font-style: italic;
+}
+.content-six {
+    margin-top: 26px;
+    @include secondaryFont(700, 16px, 24px,  #FFFFFF);
+    font-style: italic;
+}
+
+.about-text {
+    @include secondaryFont(400, 14px, 21px,  #A291A5);
+    text-align: center;
+    margin-top: 120px;
+}
+
+.about-text::after {
+    content: '';
+    position: absolute;
+    background-color: #645766;
+    align-items: center;
+    left: 280px;
+    width: 780px;
+    height: 2px;
+    margin-top: 35px;
+}
+
+@media (max-width: 1200px) {
+    .about__conteiner {
+        max-width: 993px;
+    }
+}
+
+@media (max-width: 992px) {
+    .about__conteiner {
+        min-width: 481px;
+    }
+
+    .about__title {
+        @include mainFont(700, 42px, 44px,  #FFFFFF);
+        text-align: center;
+        margin-top: 45px;
+    }
+
+    .about__info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about__suppliers {
+        padding: 0 40px;
+    }
+
+    .content-first {
+        margin-top: 13px;
+        @include secondaryFont(700, 16px, 24px,  #FFFFFF);
+        font-style: italic;
+    }
+    
+    .content-second {
+        margin-top: 10px;
+        @include secondaryFont(700, 16px, 24px,  #FFFFFF);
+        font-style: italic;
+    }
+    .content-third {
+        margin-top: 10px;
+        @include secondaryFont(700, 16px, 24px,  #FFFFFF);
+        font-style: italic;
+    }
+
+    .content-four {
+        margin-top: 15px;
+        @include secondaryFont(700, 16px, 24px,  #FFFFFF);
+        font-style: italic;
+    }
+    
+    .content-five {
+        margin-top: 15px;
+        @include secondaryFont(700, 16px, 24px,  #FFFFFF);
+        font-style: italic;
+    }
+    .content-six {
+        margin-top: 16px;
+        @include secondaryFont(700, 16px, 24px,  #FFFFFF);
+        font-style: italic;
+    }
+    
+    .about-text {
+        @include secondaryFont(400, 14px, 21px,  #A291A5);
+        text-align: center;
+        margin: 27px 25px 40px;
+    }
+    
+    .about-text::after {
+        left: 100px;
+        width: 555px;
+        height: 2px;
+        margin-top: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about__conteiner {
+        min-width: 320px;
+    }
+    
+    .about__info {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .info__content {
+        padding-top: 18px;
+    }
+    .content-first {
+        margin-top: 13px;
+        @include secondaryFont(700, 16px, 24px,  #FFFFFF);
+        font-style: italic;
+    }
+    
+    .content-second {
+        margin-top: 10px;
+        @include secondaryFont(700, 16px, 24px,  #FFFFFF);
+        font-style: italic;
+    }
+    .content-third {
+        margin-top: 10px;
+        @include secondaryFont(700, 16px, 24px,  #FFFFFF);
+        font-style: italic;
+    }
+
+    .content-four {
+        margin-top: 15px;
+        @include secondaryFont(700, 16px, 24px,  #FFFFFF);
+        font-style: italic;
+    }
+    
+    .content-five {
+        margin-top: 15px;
+        @include secondaryFont(700, 16px, 24px,  #FFFFFF);
+        font-style: italic;
+    }
+    .content-six {
+        margin-top: 16px;
+        @include secondaryFont(700, 16px, 24px,  #FFFFFF);
+        font-style: italic;
+    }
+    
+    .about-text {
+        margin: 17px 25px 40px;
+        @include secondaryFont(400, 14px, 21px,  #A291A5);
+        text-align: center;
+        
+    }
+    
+    .about-text::after {
+        left: 65px;
+        width: 260px;
+        margin-top: 35px;
+    }
+
+}
+
+
+
